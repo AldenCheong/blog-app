@@ -1,14 +1,22 @@
-<h1>Hi, create your account</h1>
-    
-<h2>
-    This is the home page for the blog
-</h2>
 <div>
     <% if current_user %>
-          <%= link_to "Create New Post", newpost_path %>
-    <% else %>
+        <h1>Welcome back, </h1>
+        
+        <h2>
+            This is the home page for the blog
+        </h2>
         <body>
-            Please login first !
+            <%= link_to "Create New Post", newpost_path %> | 
+            <%= link_to 'All Post', posts_path %>
+        </body>
+    <% else %>
+        <h1>Hi, please register or login</h1>
+        
+        <h2>
+            This is the home page for the blog
+        </h2>
+        <body>
+            Register and login link above :D
         </body>
     <% end %>
 </div>
