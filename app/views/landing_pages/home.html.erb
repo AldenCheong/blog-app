@@ -3,6 +3,13 @@
 <h2>
     This is the home page for the blog
 </h2>
-
-<%= link_to "Sign up now!", signup_path%>
+<div>
+    <% if current_user %>
+          <%= link_to "Create New Post", newpost_path %>
+    <% else %>
+        <body>
+            Please login first !
+        </body>
+    <% end %>
+</div>
 
